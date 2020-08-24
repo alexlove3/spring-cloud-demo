@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8901
+eureka:
+  instance:
+    hostname: server1
+    appname: 注册中心
+  client:
+#    register-with-eureka: false # default true
+#    fetch-registry: false # default true
+    service-url:
+#      eureka-server高可用配置相互注册，即server1向server2注册，serve2向server1注册
+      defaultZone: http://server2:8902/eureka/
+  server:
+#    enable-self-preservation: false # default true
+    eviction-interval-timer-in-ms: 4000
+

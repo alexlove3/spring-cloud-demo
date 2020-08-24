@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-provider
+
+server:
+  port: 8903
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: provider
+    appname: 生产者
+  client:
+    service-url:
+      # 向server注册
+      defaultZone: http://server1:8901/eureka/

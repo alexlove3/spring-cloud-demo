@@ -1,0 +1,16 @@
+server:
+  port: 8905
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      # 启动服务，即可从配置的路径下读取到相应的配置信息
+      server:
+        git:
+          uri: https://github.com/alexlove3/spring-cloud-demo
+          default-label: master
+          search-paths: config-server/config
+          username: user
+          password: pass

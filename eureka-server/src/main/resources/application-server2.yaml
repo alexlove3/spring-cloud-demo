@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8902
+eureka:
+  instance:
+    hostname: server2
+    appname: 注册中心
+  client:
+#    register-with-eureka: false # default true
+#    fetch-registry: false # default true
+    service-url:
+      defaultZone: http://server1:8901/eureka/
+  server:
+#    enable-self-preservation: false # default true
+    eviction-interval-timer-in-ms: 4000
+
