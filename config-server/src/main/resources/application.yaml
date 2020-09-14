@@ -9,6 +9,7 @@ spring:
       # 启动服务，即可从配置的路径下读取到相应的配置信息
       server:
         git:
+          # uri 也可直接配置本地文件 file://${user.home}/config-repo
           uri: https://github.com/alexlove3/spring-cloud-demo
           default-label: master
           search-paths: config-server/config

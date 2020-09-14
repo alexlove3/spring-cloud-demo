@@ -12,10 +12,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Config {
 
-    @Value("${env}")
+    @Value("${data.env}")
     private String env;
 
-    @Value("${user}")
+    @Value("${data.user}")
     private String user;
 
 }
